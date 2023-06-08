@@ -9,7 +9,7 @@ def fib(n):
         return fib(n - 1) + fib(n - 2)
 
 async def async_fib(n):
-    await asyncio.sleep(random.random())  # Introduce random delay
+    await asyncio.sleep(random.uniform(0, 1))
     return fib(n)
 
 
