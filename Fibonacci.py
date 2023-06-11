@@ -22,3 +22,10 @@ async def main():
     tasks = [task1, task2]
     finished, _unfinished = await asyncio.wait(tasks, return_when=asyncio.FIRST_COMPLETED)
     finished = finished.pop()
+
+    print(f"{finished.get_name()} finished first")
+    print(f"Fibonacci number Fib({n}): {finished.result()}")
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
